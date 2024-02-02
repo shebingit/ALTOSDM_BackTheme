@@ -1,0 +1,118 @@
+{% extends 'HDBase.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="row">
+    <div class="col-lg-12 d-flex flex-column">
+      <div class="row flex-grow">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card card-rounded">
+            <div class="card-body">
+              <div class="d-sm-flex justify-content-between align-items-start">
+                <div>
+                  <h4 class="card-title card-title-dash">Task Allocation Form </h4>
+                  <p class="card-subtitle card-subtitle-dash">You have 50  client tasks</p>
+                </div>
+                <div>
+                  <a href="{% url 'HD_work_list' %}" class=" btn btn-sm btn-primary"><span class="mdi mdi-reply"></span>
+                    <span class="text-small letter-sp ml-04"> Back</span>
+                  </a>
+                </div>
+                
+               
+              </div>
+
+              <div class="row">
+                <div class="col-lg-5  flex-column">
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Team Lead \ Executive </label>
+                
+                    <select class="form-control" style="color: #b1b1b4; " required>
+                        <option value="0"> Shebin Shaji </option>
+                        
+                        
+                    </select>
+                </div>
+                </div>
+                <div class="col-lg-2  flex-column">
+                    <div class="form-group">
+                        <label for="sdate-name" class="col-form-label">Start From* </label>
+                        <input type="date" class="form-control" style="color: #b1b1b4;" required>
+                    </div>
+                </div>
+                <div class="col-lg-2  flex-column">
+                    <div class="form-group">
+                        <label for="end-name" class="col-form-label">Due On* </label>
+                        <input type="date" class="form-control" style="color: #b1b1b4;" required/>
+                    </div>
+                </div>
+                <div class="col-lg-3  flex-column">
+                  <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Work Type</label>
+                  
+                      <select class="form-control" style="color: #b1b1b4; " required>
+                          <option value="0"> Individul </option>
+                          <option value="1" selected> Group </option>
+                          
+                      </select>
+                  </div>
+              </div>
+              <div class="col-lg-12  flex-column">
+                <div class="form-group">
+                  <h5 class="mt-3">Task Details</h5>
+
+                  <p><span class="mdi mdi-checkbox-marked-outline mr-05"> </span>Check the tasks listed below to allocate employee . </p>
+                  <ul class="task-ul">
+                    <li>
+                        <div class="form-check form-check-flat mt-0">
+                            <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" aria-checked="false"><i
+                                class="input-helper"></i> Email Marketing 
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check form-check-flat mt-0">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" aria-checked="false"><i
+                            class="input-helper"></i> Mobile Marketing </label>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="form-check form-check-flat mt-0">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" aria-checked="false"><i
+                            class="input-helper"></i> SMO POST </label>
+                      </div>
+                    </li>
+                  </ul>
+                                
+                </div>
+              </div>
+              <div class="col-lg-12  flex-column">
+                <div class="form-group">
+                    <label for="About-text" class="col-form-label ">Any Description  </label>
+                    <textarea class="form-control" style="height: 150px;  color: #b1b1b4;" ></textarea>
+                </div>
+              </div>
+                
+            </div>
+            <div>
+              <button type="reset" class="btn btn-sm btn-light"> Clear</button>
+              <button type="submit" class="btn btn-sm btn-success"> Save</button>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

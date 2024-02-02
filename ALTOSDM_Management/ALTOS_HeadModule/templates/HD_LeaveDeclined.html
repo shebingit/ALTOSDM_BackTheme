@@ -1,0 +1,132 @@
+{% extends 'HDBase.html' %}
+{% load static %}
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-12 d-flex flex-column">
+      <div class="row flex-grow">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card card-rounded">
+            <div class="card-body">
+              <div class="d-sm-flex justify-content-between align-items-start">
+                <div>
+                  <h4 class="card-title card-title-dash">Declined Leave Request</h4>
+                  <p class="card-subtitle card-subtitle-dash">You have 50 declined request</p>
+                </div>
+                <div>
+                  <button class=" btn btn-sm btn-primary" id="filter-btn" onclick="showFilterForm()"><span class="mdi mdi-filter-outline"></span>
+                    <span class="text-small"> Filter</span>
+                  </button>
+                </div>
+               
+              </div>
+               <!-- Filter Form -->
+
+               <div class="search-form hide" id="filter-form">
+                <form action="#" method="post">
+                  {% csrf_token %}
+                 
+                  <div class="row">
+                    <div class="col-lg-3  flex-column">
+                      <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">From Date :</label>
+                          <input type="date" class="form-control  border-normal" style="color: #c0c0c1;" id="recipient-name" required>
+                      </div>
+                    </div>
+                    <div class="col-lg-3  flex-column">
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">To Date :</label>
+                            <input type="date" class="form-control  border-normal" style="color: #c0c0c1;" id="recipient-name" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <div class="form-group d-flex justify-content-center align-items-center ">
+                         <button type="submit" class="btn btn-sm btn-success mt-5"><span class="mdi mdi-magnify"></span></button>
+                         <button type="button" class="btn btn-sm btn-danger mt-5 ml-04" onclick="closesFilterForm()" >
+                          <span class="mdi mdi-close"></span>
+                         </button>
+                        </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- end -->
+
+              <div class="table-responsive  mt-1">
+                <table class="table select-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        No
+                      </th>
+                      <th>Employee</th>
+                      <th>From Date</th>
+                      <th>To Date</th>
+                      <th>Days</th>
+                      <th>Reason </th>
+                      <th> Declined Date</th>
+                      <th>Status </th>
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                     
+                        <td>
+                            <div class="d-flex">
+                            <img src="{% static 'images/faces/face3.jpg' %}" alt="profile">
+                            <div>
+                                <h6>Wayne Murphy</h6>
+                                <p>Head admin</p>
+                            </div>
+                            </div>
+                        </td>
+                        
+                        <td> <p>09/85/162</p></td>
+                        <td> <p>12/85/162</p></td>
+                        <td><p>3</p> </td>
+                        <td> 
+                            <div class="">
+                                <p>Filler text is text that shares some <br>characteristics of a real writ</p>
+                                <!-- |slice:":60"|linebreaksbr -->
+                            </div>
+                        </td>
+                        <td> <p>09/85/162</p></td>
+                        <td>
+                            <div class="badge badge-opacity-danger">Declined</div>
+                        </td>
+                        
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+</div>
+
+
+<!-- Script to toggle-->
+
+<script>
+  var filterContent = document.getElementById('filter-form')
+  function showFilterForm() {
+    filterContent.classList.remove('hide');
+    filterContent.classList.add('show');
+  }
+
+  function closesFilterForm() {
+    filterContent.classList.remove('show');
+    filterContent.classList.add('hide');
+  }
+</script>
+
+  {% endblock %}

@@ -1,0 +1,306 @@
+{% extends 'HDBase.html' %}
+{% load static %}
+{% block body %}
+
+
+
+<div class="row">
+    <div class="col-lg-12 d-flex flex-column">
+      <div class="row flex-grow">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card card-rounded">
+            <div class="card-body">
+              <div class="d-sm-flex justify-content-between align-items-start">
+                <div>
+                  <h4 class="card-title card-title-dash">Registered Tasks and Details</h4>
+                  <p class="card-subtitle card-subtitle-dash">You have 50  client tasks</p>
+                </div>
+                <div>
+                  <a href="{% url 'HD_work_list' %}" class=" btn btn-sm btn-primary"><span class="mdi mdi-reply"></span>
+                    <span class="text-small letter-sp ml-04"> Back</span>
+                  </a>
+                </div>
+               
+              </div>
+
+             
+                <div class="row">
+                    <div class="col-lg-7 col-sm-12">
+                        <h6 class="card-title card-title-dash mt-3">Client Informations</h6>
+                        <ul class="normal-ul">
+                            <li>
+                            
+                                    <div>
+                                        <h6 class="text-medium">Wayne Murphy</h6>
+                                        <p><span class="icon-mail mr-05"></span> waynemurphygmail.com</p>
+                                        <p class=""><span class="icon-phone mr-05"></span> 909878765</p>
+                                    </div>
+
+                            </li>
+                            <li>
+                                <h5 class="card-title card-title-dash mt-3">Work Informations</h5>
+                                <ul class="normal-ul">
+                                    <li>
+                                        <div class="">
+                                            <p><span class="icon-calendar mr-05"></span> Start From - 12\03\23</p>
+                                            <p><span class="icon-calendar mr-05"></span> End On - 12\09\23</p>
+                                        </div>
+
+                                        <div>
+                                           
+                                            <div
+                                              class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                              <p>Progress</p>
+                                              <p class="text-success">65%</p>
+                                              <p>4 / Task</p>
+                                            </div>
+                                            <div class="progress progress-md">
+                                              <div class="progress-bar bg-warning" role="progressbar" style="width: 65%"
+                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2">Status - Work in progress</p>
+                                    </li>
+                                    <li>
+                                        <h5 class="card-title card-title-dash mt-3">Task Lists</h5>
+                                        <ul class="normal-ul">
+                                            <li>
+                                                <p><span class="mdi mdi-file-document text-secondary mr-05"></span> Email Marketing</p>
+                                                
+                                                <div>
+                                                    <p>
+                                                        Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, 
+                                    
+                                                    </p>
+                                                    <a href="#"><span class="mdi mdi-pencil"></span></a>
+                                                    <a href="#"><span class="mdi mdi-delete text-danger"></span></a>
+                                                    <hr>
+                                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p><span class="mdi mdi-file-document text-secondary mr-05"></span> Mobile Marketing </p>
+                                            </li>
+                                            <li>
+                                                <p><span class="mdi mdi-file-document text-secondary mr-05"></span> SMO POST </p>
+                                            </li>
+                                            <li>
+                                                <p><span class="mdi mdi-file-document text-secondary mr-05"></span> Lead Generation </p>
+                                                <ul class="normal-ul">
+                                                    <li>
+                                                         <p><span class="mdi mdi-book-open-page-variant text-secondary mr-05"></span>Digital Marketing Lead Collection</p>
+                                                         <a href="#"><span class="mdi mdi-plus-circle-outline text-success"></span> Field</a>
+                                                         <a href="#"><span class="mdi mdi-pencil ml-04"></span></a>
+                                                         <a href="#"><span class="mdi mdi-delete text-danger"></span></a>
+
+                                                         <p class="text-small">
+                                                            <span class="mdi mdi-alert-outline mr-05 "> </span> The following data represents the field names for lead generation titles.</p>
+
+                                                        <ul class="normal-ul">
+                                                            <li> <p><span class="mdi mdi-arrow-right mr-05"></span>Lead Name</p></li>
+                                                            <li> <p><span class="mdi mdi-arrow-right mr-05"></span>Lead Email</p></li>
+                                                            <li> <p><span class="mdi mdi-arrow-right mr-05"></span>Lead Contact</p></li>
+                                                            <li> <p><span class="mdi mdi-arrow-right mr-05"></span>Lead Source</p></li>
+                                                            <li class="d-flex">
+                                                                <p><span class="mdi mdi-arrow-right mr-05"></span>Lead Source</p>
+                                                                <div class="ml-04">
+                                                                    <a href="#"><span class="mdi mdi-pencil"></span></a>
+                                                                    <a href="#"><span class="mdi mdi-delete text-danger"></span></a>
+                                                                </div>
+                                                                
+                                                            </li>
+                                                        </ul>
+
+                                                    </li>
+                                                    
+                                                </ul>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-sm-12">
+                        <h5 class="card-title card-title-dash">Tasks</h5>
+                        <ul class="task-ul">
+                            <li>
+                                <div class="form-check form-check-flat mt-0">
+                                    <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input"  aria-checked="false"  checked  ><i
+                                        class="input-helper"></i> Email Marketing 
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-flat mt-0">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" aria-checked="false" checked ><i
+                                    class="input-helper"></i> Mobile Marketing </label>
+                              </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-flat mt-0">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" aria-checked="false" checked ><i
+                                    class="input-helper"></i>SMO POST
+                                </label>
+                                </div>
+                            </li>
+                        </ul>
+                       
+                        <p><span class="mdi mdi-file-check mr-05 nt-2"> </span>If the client needs any additional tasks that are not listed above, you can add them. </p>
+                        
+                        <div>
+                            <form action="#" method="post" >
+                                {% csrf_token %}
+                                <div class="form-group d-flex">
+                                    
+                                    <input type="text" class="form-control border-normal" id="new-task" style="color: #b1b1b4;" >
+                                    <button type="submit" class="btn btn-sm btn-danger ml-04" >
+                                        <span class="mdi mdi-plus text-white"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                         
+                            <ul class="lead-task-ul mt-2">
+                                <li>
+                                    <div class="form-check form-check-flat mt-0">
+                                    <label class="form-check-label">
+                                    <input type="checkbox" name="task-checklist" class="form-check-input" aria-checked="false"><i
+                                        class="input-helper"></i> Lead Generation </label>
+                                </div>
+
+                                <ul class="lead-sub-ul"></ul>
+
+                                </li>
+                            
+                            </ul>
+                            <p><span class="mdi mdi-file-document  mr-05 mt-2"> </span>
+                                If the client requires lead generation for various titles, you can include them.
+                                <span class="text-small">( Make sure you have checked the lead generation checkbox.)</span>
+                            </p>
+                            <div class="form-group d-flex">
+                                    
+                                <input type="text" class="form-control border-normal" id="new-lead-task" style="color: #b1b1b4;" >
+                                <button type="button" class="btn btn-sm btn-danger ml-04" id="leadtask-add-btn" onclick="addleadTask()">
+                                    <span class="mdi mdi-plus text-white"></span>
+                                </button>
+                            </div>
+                            <div>
+                                <button type="reset" class="btn btn-sm btn-light"> Clear</button>
+                                <button type="submit" class="btn btn-sm btn-success bg-success"> Save</button>
+                            </div>
+                        </form>
+
+
+                        <div>
+                            <form action="#" method="post">
+                                {% csrf_token %}
+                                <h5 class="card-title card-title-dash mt-2">Lead Generation Titles</h5>
+                                <p><span class="mdi mdi-file-document  mr-05 mt-3"> </span>
+                                    If the client requires lead generation for various titles, you can include them.
+                                    
+                                </p>
+                                <div class="form-group d-flex">
+                                        
+                                    <input type="text" class="form-control border-normal" name="newlead-task" style="color: #b1b1b4;" >
+                                    <button type="submit" class="btn btn-sm btn-danger ml-04" >
+                                        <span class="mdi mdi-plus text-white"></span>
+                                    </button>
+                                </div>
+                            </form>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+
+
+
+<script>
+    function addleadTask() {
+        // Get the input value
+        var newTaskValue = document.getElementById('new-lead-task').value;
+
+        // Check if newTaskValue is available
+        if (newTaskValue.trim() !== '') {
+            // Create a new list item
+            var newListItem = document.createElement('li');
+
+            // Create the form-check div and label
+            var formCheckDiv = document.createElement('div');
+            formCheckDiv.className = 'form-check form-check-flat mt-0 d-flex';
+
+            var label = document.createElement('label');
+            label.className = 'form-check-label';
+
+            // Create the checkbox
+            var checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.className = 'form-check-input';
+            checkbox.setAttribute('aria-checked', 'false');
+            checkbox.name = 'lead-checklist'
+
+            // Create the input-helper
+            var inputHelper = document.createElement('i');
+            inputHelper.className = 'input-helper';
+
+            // Create the "Remove" button
+            var removeButton = document.createElement('button');
+            removeButton.className = 'btn remove-task-btn btn-sm ml-04';
+            removeButton.innerHTML = '<span class="mdi mdi-minus text-white"></span>';
+            removeButton.type = 'button'
+            removeButton.onclick = function() {
+                removeleadTask(this);
+            };
+
+            // Append the elements to the DOM
+            label.appendChild(checkbox);
+            label.appendChild(inputHelper);
+            label.appendChild(document.createTextNode(' ' + newTaskValue));
+            formCheckDiv.appendChild(label);
+            formCheckDiv.appendChild(removeButton);
+            newListItem.appendChild(formCheckDiv);
+
+            // Append the new list item to the task-ul
+            document.querySelector('.lead-sub-ul').appendChild(newListItem);
+
+            // Clear the input field
+            document.getElementById('new-lead-task').value = '';
+        } else {
+            // Handle the case when newTaskValue is not available
+            alert('Please enter a valid task.');
+        }
+    }
+
+    function removeleadTask(button) {
+        var taskLi = button.closest('li');
+        var taskUl = document.querySelector('.lead-sub-ul');
+
+        if (taskLi) {
+            taskUl.removeChild(taskLi);
+        } else {
+            alert('Task not found.');
+        }
+    }
+</script>
+
+
+
+{% endblock %}

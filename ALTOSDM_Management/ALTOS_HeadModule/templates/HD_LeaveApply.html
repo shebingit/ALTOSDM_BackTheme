@@ -1,0 +1,83 @@
+{% extends 'HDBase.html' %}
+{% load static %}
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-12 d-flex flex-column">
+      <div class="row flex-grow">
+        <div class="col-12 grid-margin stretch-card">
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="card card-rounded">
+                    <div class="card-body">
+                    <div class="d-sm-flex justify-content-between align-items-start">
+                        <div>
+                        <h4 class="card-title card-title-dash">Leave Apply Form</h4>
+                        <p class="card-subtitle card-subtitle-dash">You have 50 declined request</p>
+                        </div>
+                    
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4  flex-column">
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Employee :</label>
+                            
+                                <select class="form-control" style="color: #c0c0c1; " required>
+                                    <option value=""> select employee </option>
+                                    <option> Shebin Shaji</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3  flex-column">
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">From Date :</label>
+                                <input type="date" class="form-control  border-normal" style="color: #c0c0c1;" id="recipient-name">
+                            </div>
+                        </div>
+                        <div class="col-lg-3  flex-column">
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">To Date :</label>
+                                <input type="date" class="form-control  border-normal" style="color: #c0c0c1;" id="recipient-name">
+                            </div>
+                        </div>
+                        <div class="col-lg-2  flex-column">
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Leave Type :</label>
+                            
+                                <select class="form-control" style="color: #c0c0c1; " required>
+                                    <option value="Full Day"> Full Day</option>
+                                    <option value="Half Day"> Half Day</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-12  flex-column">
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label ">Reason Details :</label>
+                                <textarea class="form-control border-normal" style="height: 120px;  color: #c0c0c1;" ></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12  flex-column">
+                            <div class="form-group d-sm-flex justify-content-end">
+                               <button type="submit" class="btn btn-sm btn-success mr-1"> Apply Leave</button>
+                               <button type="button" class="btn btn-sm btn-light "> Clear</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+      
+    </div>
+    
+</div>
+
+
+
+  {% endblock %}
